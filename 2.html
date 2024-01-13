@@ -3,22 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tải và Lưu File ZIP</title>
+    <title>Upload và Lưu File</title>
 </head>
 <body>
+    <h1>Upload và Lưu File</h1>
 
-<?php
-ini_set('memory_limit', '-1'); // Đặt giới hạn bộ nhớ là không giới hạn
-$link = 'http://serveo.net:8072/gojo.zip';
-$content = file_get_contents($link);
-
-// Mở tập tin để ghi nội dung vào
-$file = fopen('gojo.zip', 'w');
-fwrite($file, $content);
-fclose($file);
-
-echo 'File ZIP đã được tải và lưu tại: gojo.zip';
-?>
-
+    <form action="upload.php" method="post" enctype="multipart/form-data">
+        <label for="file">Chọn tệp:</label>
+        <input type="file" name="file" id="file" required>
+        <br>
+        <button type="submit" name="submit">Tải lên</button>
+    </form>
 </body>
 </html>
