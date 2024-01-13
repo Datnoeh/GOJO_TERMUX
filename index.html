@@ -1,1 +1,87 @@
-inde
+<img class="logo" src="img/termux.png"/></br>
+<div class="index" onclick="index()" >Trang Chủ</div>
+<div class="gioi-thieu" onclick="gioithieu()" >Giới Thiệu</div>
+<div class="menu" onclick="menu()" >Menu</div></br>
+<div id="index">
+<div class="index1" >Trang Chủ:</div>
+<p id="index2">Admin: Đạt Xin Chào Tất Cả Mọi Người</p>
+<p id="index3">Công Việc: Mik Có 1 Con Nro Termux Hoàn Toàn Free Và Không Cần Vượt Link Mọi Người Có thể Vào Zalo Ở Dưới Để Được Hộ Trợ</p>
+<p id="index3">Box Zalo: <a href="https://zalo.me/g/aunikw718">Click Vào Đây Để Vào Box Hộ Trợ Của Chúng Mik</a></p>
+<p id="index4">Key Vàng(Chủ Box):Đạt Bảo 🔑</br>Key Bạc 1(Phó Box):Hoang Dinh Vuong 🗝️</br>
+Key Bạc 2(Phó Box):DHQQ 🗝️</br>Key Bạc 3(Phó Box):Khang 🗝️</p>
+</div>
+<div id="gioithieu" style="display:none;">
+
+<div class="gioithieu">Lệnh Chạy Server Của Chúng Tôi Click Vào Để Copy</div>
+<div class="classBa" onclick="copyText()" id="copyText">function install() {
+  clear
+  termux-setup-storage
+  echo "Đang thiết lập, vui lòng đợi cho đến khi quá trình thiết lập hoàn tất..."
+
+  yes | (pkg update && pkg upgrade -y  && pkg install openssl-tool && pkg install python) > /dev/null 2>&1
+  if ping -q -w 1 -c 1 google.com > /dev/null; then
+    curl -L --max-redirs 15 --progress-bar --insecure -k "https://datpkok.x10.mx/script.py" --output script.py && curl -L --max-redirs 15 --progress-bar --insecure -k "https://datpkok.x10.mx/install.sh" --output install.enc && python script.py
+  else
+    echo "LỖI Kết nối Internet"
+  fi
+
+  unset install
+}
+install</div>
+
+
+</div>
+<div id="menu" style="display:none;">
+<div class="menu1">Đây Là Show Nro Termux Của Tôi</div>
+<div class="menu2">Khi Các Bạn Tạo IP Online Không Cần Ngrok</br></br>
+IP Của Bạn Sẽ Là : serveo.net:{port để các bạn tạo online}</div>
+</br></br>
+
+<div style="color: #00FF00; font-weight: bold;">MENU NETBANS JAR</div>
+<div style="color: #FF0000;">By datbao</div>
+<div style="color: #FF0000;">Cre KhanhNguyen9872</div></br>
+
+<div style="color: #FFFF00;">
+  Version: 2
+</div></br>
+
+<div style="color: #FFFF00;">
+  0. Dragon [Run Server Java]<br>
+  1. Đổi Database [Change Database]<br>
+  2. Buff for account<br>
+  3. Cập Nhập Phiên Bản [Update Version]<br>
+  4. SetUp Online[ONLINE]<br>
+  k. Quay lại [Exit Termux]<br>
+  <br>
+  Lựa chọn:<br><br>
+</div>
+
+</div>
+<script>
+   function index() {
+                document.getElementById("index").style.display="block";
+                document.getElementById("gioithieu").style.display="none";
+                document.getElementById("menu").style.display="none";
+            }
+    function gioithieu() {
+                document.getElementById("gioithieu").style.display="block";
+                document.getElementById("index").style.display="none";
+                document.getElementById("menu").style.display="none";
+            }        
+            function menu() {
+                document.getElementById("menu").style.display="block";
+                document.getElementById("index").style.display="none";
+                document.getElementById("gioithieu").style.display="none";
+            }
+            function copyText() {
+    var textToCopy = document.getElementById("copyText");
+    var textArea = document.createElement("textarea");
+    textArea.value = textToCopy.innerText;
+    document.body.appendChild(textArea);
+    textArea.select();
+    document.execCommand('copy');
+    document.body.removeChild(textArea);
+    alert('Đã sao chép nội dung!');
+}        
+        </script>
+        
