@@ -1,6 +1,0 @@
-git config user.email "datbao2445@gmail.com"
-git config user.name "Datnoeh"
-
-git remote set-url origin https://github.com/Datnoeh/GOJO_TERMUX.git
-
-git remote set-url origin https://Datnoeh:${YOUR_PAT}@github.com/Datnoeh/GOJO_TERMUX.git
